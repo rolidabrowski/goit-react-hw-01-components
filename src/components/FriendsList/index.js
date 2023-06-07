@@ -1,1 +1,1 @@
-export * from './FriendsList.js';
+export * from './FriendsList';

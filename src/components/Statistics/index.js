@@ -1,1 +1,1 @@
-export * from './Statistics.js';
+export * from './Statistics';
