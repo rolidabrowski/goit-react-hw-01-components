@@ -47,7 +47,7 @@
   font-size: 14px;
 }
 
-.stats-item {
+.statsItem {
   width: 100px;
   padding: 15px;
   display: flex;
@@ -59,7 +59,7 @@
   border-top: #b3b8cd 1px solid;
 }
 
-.stats-item:not(:last-child) {
+.statsItem:not(:last-child) {
   border-right: #b3b8cd 1px solid;
 }
 

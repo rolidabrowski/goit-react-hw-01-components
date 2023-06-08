@@ -1,4 +1,4 @@
-.friend-list {
+.list {
   width: 400px;
   display: flex;
   align-items: center;
@@ -7,7 +7,7 @@
   margin-bottom: 50px;
 }
 
-.friend-item {
+.item {
   display: flex;
   align-items: center;
   width: 300px;
@@ -18,11 +18,11 @@
   border-radius: 5px;
 }
 
-.friend-item:not(:last-child) {
+.item:not(:last-child) {
   margin-bottom: 10px;
 }
 
-.friend-status {
+.status {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,6 +32,6 @@
   border-radius: 50%;
 }
 
-.friend-name {
+.name {
   padding-left: 15px;
 }

@@ -13,7 +13,7 @@
   font-size: 24px;
 }
 
-.stat-list {
+.list {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,6 +22,10 @@
 }
 
 .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 10px;
   width: 80px;
   border-top: #b3b8cd 1px solid;
@@ -29,4 +33,8 @@
 
 .item:not(:last-child) {
   border-right: #b3b8cd 1px solid;
+}
+
+.label {
+  margin-bottom: 5px;
 }

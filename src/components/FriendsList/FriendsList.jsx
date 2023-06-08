@@ -1,9 +1,9 @@
-import './FriendsList.css';
+import css from './FriendsList.module.css';
 import PropTypes from 'prop-types';
 
 export const FriendsList = ({ friends }) => {
   return (
-    <ul className="friend-list">
+    <ul className={css.list}>
       {friends.map(friend => (
         <FriendsListItem
           key={friend.id}
@@ -18,12 +18,12 @@ export const FriendsList = ({ friends }) => {
 
 const FriendsListItem = ({ avatar, name, isOnline }) => {
   return (
-    <li className="friend-item">
+    <li className={css.item}>
       <span
         style={{
           backgroundColor: isOnline ? 'green' : 'red',
         }}
-        className="friend-status"
+        className={css.status}
       >
         {isOnline}
       </span>
@@ -33,7 +33,7 @@ const FriendsListItem = ({ avatar, name, isOnline }) => {
         alt="User avatar"
         width="48"
       />
-      <p className="friend-name">{name}</p>
+      <p className={css.name}>{name}</p>
     </li>
   );
 };
