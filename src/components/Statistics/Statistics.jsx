@@ -1,15 +1,17 @@
 import './Statistics.css';
 import PropTypes from 'prop-types';
 
-export const Statistics = ({ title, stats }) => {
+export const Statistics = ({ title = 'Upload stats', stats }) => {
   return (
-    <section class="statistics">
-      <h2 class="title">{title}</h2>
-      <ul class="stat-list">
+    <section className="statistics">
+      <h2 className="title">
+        {title.length > 0 ? `${title} ` : 'No unread messages.'}
+      </h2>
+      <ul className="stat-list">
         {stats.map(stat => (
-          <li key={stat.id} class="item">
-            <span class="label">{stat.label}</span>
-            <span class="percentage">{stat.percentage}</span>
+          <li key={stat.id} className="item">
+            <span className="label">{stat.label}</span>
+            <span className="percentage">{stat.percentage}%</span>
           </li>
         ))}
       </ul>
@@ -19,9 +21,6 @@ export const Statistics = ({ title, stats }) => {
 
 Statistics.propTypes = {
   id: PropTypes.string,
-  title: PropTypes.string,
-  stats: {
-    label: PropTypes.string,
-    percentage: PropTypes.number,
-  },
+  label: PropTypes.string,
+  percentage: PropTypes.number,
 };

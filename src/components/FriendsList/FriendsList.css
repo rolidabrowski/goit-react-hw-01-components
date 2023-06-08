@@ -1,0 +1,37 @@
+.friend-list {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.friend-item {
+  display: flex;
+  align-items: center;
+  width: 300px;
+  padding: 10px;
+  background-color: #231e39;
+  border: #b3b8cd 1px solid;
+  color: white;
+  border-radius: 5px;
+}
+
+.friend-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.friend-status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  margin: 10px;
+  border-radius: 50%;
+}
+
+.friend-name {
+  padding-left: 15px;
+}

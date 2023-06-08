@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export const FriendsList = ({ friends }) => {
   return (
-    <ul class="friend-list">
+    <ul className="friend-list">
       {friends.map(friend => (
         <FriendsListItem
           key={friend.id}
@@ -18,10 +18,22 @@ export const FriendsList = ({ friends }) => {
 
 const FriendsListItem = ({ avatar, name, isOnline }) => {
   return (
-    <li class="item">
-      <span class="status">{isOnline}</span>
-      <img class="avatar" src={avatar} alt="User avatar" width="48" />
-      <p class="name">{name}</p>
+    <li className="friend-item">
+      <span
+        style={{
+          backgroundColor: isOnline ? 'green' : 'red',
+        }}
+        className="friend-status"
+      >
+        {isOnline}
+      </span>
+      <img
+        className="friend-avatar"
+        src={avatar}
+        alt="User avatar"
+        width="48"
+      />
+      <p className="friend-name">{name}</p>
     </li>
   );
 };
@@ -33,5 +45,5 @@ FriendsList.propTypes = {
 FriendsListItem.propTypes = {
   friends: PropTypes.string,
   name: PropTypes.string,
-  isOnline: PropTypes.string,
+  isOnline: PropTypes.bool,
 };
